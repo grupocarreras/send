@@ -90,7 +90,7 @@ module.exports = function(state, emit) {
         break;
       case 'firefox':
         window.open(
-          'https://www.mozilla.org/firefox/new/?utm_campaign=send-acquisition&utm_medium=referral&utm_source=send.firefox.com'
+          'https://www.mozilla.org/firefox/new/?utm_campaign=send-acquisition&utm_medium=referral&utm_source=send.grupocarreras.com'
         );
         break;
       case 'download':

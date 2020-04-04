@@ -14,7 +14,7 @@
       "report": "https://github.com/mozilla/send/issues/new"
     },
     "urls": {
-      "prod": "https://send.firefox.com/",
+      "prod": "https://send.grupocarreras.com/",
       "stage": "https://stage.send.nonprod.cloudops.mozgcp.net/",
       "dev": "https://send2.dev.lcip.org/"
     },

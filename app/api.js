@@ -8,7 +8,7 @@ try {
   // NOOP
 }
 if (!fileProtocolWssUrl) {
-  fileProtocolWssUrl = 'wss://send.firefox.com/api/ws';
+  fileProtocolWssUrl = 'wss://send.grupocarreras.com/api/ws';
 }
 
 export class ConnectionError extends Error {
@@ -430,6 +430,17 @@ export function sendMetrics(blob) {
 
 export async function getConstants() {
   const response = await fetch(getApiUrl('/config'));
+
+  if (response.ok) {
+    const obj = await response.json();
+    return obj;
+  }
+
+  throw new Error(response.status);
+}
+
+export async function sendEmail(message) {
+  const response = await fetch(getApiUrl(`/api/email`), post({ message }));
 
   if (response.ok) {
     const obj = await response.json();

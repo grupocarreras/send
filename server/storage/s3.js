@@ -1,5 +1,13 @@
 const AWS = require('aws-sdk');
-const s3 = new AWS.S3();
+const config = require('../config');
+
+const s3 = new AWS.S3({
+  accessKeyId: config.s3_access_key,
+  secretAccessKey: config.s3_secret_access_key,
+  endpoint: config.s3_endpoint,
+  s3ForcePathStyle: true, // needed with minio?
+  signatureVersion: 'v4'
+});
 
 class S3Storage {
   constructor(config, log) {

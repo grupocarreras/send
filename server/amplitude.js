@@ -2,10 +2,13 @@ const crypto = require('crypto');
 const fetch = require('node-fetch');
 const config = require('./config');
 const pkg = require('../package.json');
+const mozlog = require('./log');
 
 const geoip = config.ip_db
   ? require('fxa-geodb')({ dbPath: config.ip_db })
   : () => ({});
+
+const log = mozlog('amplitude');
 
 const HOUR = 1000 * 60 * 60;
 
@@ -154,7 +157,26 @@ async function sendBatch(events, timeout = 1000) {
     return 200;
   }
   try {
-    const result = await fetch('https://api.amplitude.com/batch', {
+    log.info(
+      'sendBatch',
+      JSON.stringify({
+        api_key: config.amplitude_id,
+        events
+      })
+    );
+
+    return 200;
+  } catch (e) {
+    return 500;
+  }
+}
+
+async function sendBatchOLD(events, timeout = 1000) {
+  if (!config.amplitude_id) {
+    return 200;
+  }
+  try {
+    const result = await fetch('https://api.grupocarreras.com/batch', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

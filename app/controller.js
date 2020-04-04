@@ -6,8 +6,10 @@ import { bytes, locale } from './utils';
 import okDialog from './ui/okDialog';
 import copyDialog from './ui/copyDialog';
 import shareDialog from './ui/shareDialog';
-import signupDialog from './ui/signupDialog';
+//import signupDialog from './ui/signupDialog';
 import surveyDialog from './ui/surveyDialog';
+
+import EmailSender from './emailSender';
 
 export default function(state, emitter) {
   let lastRender = 0;
@@ -36,7 +38,7 @@ export default function(state, emitter) {
     document.addEventListener('blur', () => (updateTitle = true));
     document.addEventListener('focus', () => {
       updateTitle = false;
-      emitter.emit('DOMTitleChange', 'Firefox Send');
+      emitter.emit('DOMTitleChange', 'Carreras Send');
     });
     checkFiles();
   });
@@ -111,7 +113,7 @@ export default function(state, emitter) {
   });
 
   emitter.on('signup-cta', source => {
-    const query = state.query;
+    /*const query = state.query;
     state.user.startAuthFlow(source, {
       campaign: query.utm_campaign,
       content: query.utm_content,
@@ -120,7 +122,7 @@ export default function(state, emitter) {
       term: query.utm_term
     });
     state.modal = signupDialog(source);
-    render();
+    render();*/
   });
 
   emitter.on('authenticate', async (code, oauthState) => {
@@ -172,7 +174,7 @@ export default function(state, emitter) {
       }
       state.modal = state.capabilities.share
         ? shareDialog(ownedFile.name, ownedFile.url)
-        : copyDialog(ownedFile.name, ownedFile.url);
+        : copyDialog(ownedFile.name, ownedFile.url, emitter);
     } catch (err) {
       if (err.message === '0') {
         //cancelled. do nothing
@@ -304,6 +306,21 @@ export default function(state, emitter) {
       state.modal = null;
     }
     render();
+  });
+
+  /*emitter.on('sendemail', message => {
+    console.info(message);
+  });*/
+
+  emitter.on('sendemail', async message => {
+    console.info('sendemail');
+    const sender = new EmailSender(message);
+    try {
+      await sender.send();
+    } catch (e) {
+      state.sentry.captureException(e);
+      console.error(e);
+    }
   });
 
   setInterval(() => {

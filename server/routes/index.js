@@ -13,8 +13,19 @@ const clientConstants = require('../clientConstants');
 const IS_DEV = config.env === 'development';
 const ID_REGEX = '([0-9a-fA-F]{10,16})';
 
+const { sendBatch, clientEvent } = require('../amplitude');
+
+const mozlog = require('../log');
+const log = mozlog('index');
+
 module.exports = function(app) {
   app.set('trust proxy', true);
+  //RGG
+  //app.use((req, res, next) => {
+  //console.log('%O', req);
+  //next();
+  //});
+
   app.use(helmet());
   app.use(
     helmet.hsts({
@@ -39,7 +50,7 @@ module.exports = function(app) {
             "'self'",
             'wss://*.dev.lcip.org',
             'wss://*.send.nonprod.cloudops.mozgcp.net',
-            'wss://send.firefox.com',
+            'wss://send.grupocarreras.com',
             'https://*.dev.lcip.org',
             'https://accounts.firefox.com',
             'https://*.accounts.firefox.com',
@@ -124,4 +135,5 @@ module.exports = function(app) {
       res.sendStatus(500);
     }
   });
+  app.post(`/api/email`, require('./email'));
 };

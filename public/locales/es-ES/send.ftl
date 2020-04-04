@@ -1,5 +1,5 @@
-# Firefox Send is a brand name and should not be localized.
-title = Firefox Send
+# Carreras Send is a brand name and should not be localized.
+title = Carreras Send
 siteFeedback = Comentario
 importingFile = Importando...
 encryptingFile = Encriptando...
@@ -20,13 +20,13 @@ unlockButtonLabel = Desbloquear
 downloadButtonLabel = Descargar
 downloadFinish = Descarga completa
 fileSizeProgress = ({ $partialSize } de { $totalSize })
-sendYourFilesLink = Prueba Firefox Send
+sendYourFilesLink = Prueba Carreras Send
 errorPageHeader = ¡Se produjo un error!
 fileTooBig = Ese archivo es muy grande. Debería ocupar menos de { $size }.
 linkExpiredAlt = Enlace caducado
 notSupportedHeader = Tu navegador no está admitido.
 notSupportedLink = ¿Por qué no se admite mi navegador?
-notSupportedOutdatedDetail = Lamentablemente, esta versión de Firefox no admite la tecnología web que impulsa Firefox Send. Tendrás que actualizar tu navegador.
+notSupportedOutdatedDetail = Lamentablemente, esta versión de Firefox no admite la tecnología web que impulsa Carreras Send. Tendrás que actualizar tu navegador.
 updateFirefox = Actualizar Firefox
 deletePopupCancel = Cancelar
 deleteButtonHover = Eliminar
@@ -34,8 +34,8 @@ footerLinkLegal = Legal
 footerLinkPrivacy = Privacidad
 footerLinkCookies = Cookies
 passwordTryAgain = Contraseña incorrecta. Inténtelo de nuevo.
-javascriptRequired = Firefox Send requiere JavaScript
-whyJavascript = ¿Por qué Firefox Send requiere JavaScript?
+javascriptRequired = Carreras Send requiere JavaScript
+whyJavascript = ¿Por qué Carreras Send requiere JavaScript?
 enableJavascript = Por favor, activa JavaScript y vuelve a intentarlo.
 # A short representation of a countdown timer containing the number of hours and minutes remaining as digits, example "13h 47m"
 expiresHoursMinutes = { $hours }h { $minutes }m
@@ -48,8 +48,8 @@ passwordSetError = No se ha podido establecer la contraseña
 
 ## Send version 2 strings
 
-# Firefox Send, Send, Firefox, Mozilla are proper names and should not be localized
--send-brand = Firefox Send
+# Carreras Send, Send, Firefox, Mozilla are proper names and should not be localized
+-send-brand = Carreras Send
 -send-short-brand = Enviar
 -firefox = Firefox
 -mozilla = Mozilla
@@ -153,3 +153,13 @@ shareLinkButton = Compartir enlace
 shareMessage = Descargar “{ $name }” con { -send-brand }: comparte archivos de forma segura y sencilla
 trailheadPromo = Existe la forma de proteger tu privacidad. Únete a Firefox.
 learnMore = Saber más.
+emailTo = Enviar email a
+emailToPlaceholder = Enviar email a
+emailFrom = Tu email
+emailFromPlaceholder = Tu email
+emailBody = Mensaje
+emailBodyPlaceholder = Mensaje
+sendLinkButton = Enviar
+emailSended = ¡Enviado!
+emailCorporateOnly = Debe introducir un email del dominio grupocarreras.com en alguno de los dos campos 
+emailInvalid = Tu email no es válido

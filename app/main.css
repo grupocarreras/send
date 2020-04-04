@@ -200,6 +200,19 @@ footer li:hover {
   flex-shrink: 0;
 }
 
+.carreras-logo {
+  background-image: url('../assets/carreras-logo.png');
+  background-repeat: no-repeat;
+  background-size: 100px, 48px;
+  overflow: hidden;
+  text-indent: 120%;
+  white-space: nowrap;
+  display: inline-block;
+  height: 32px;
+  width: 100px;
+  flex-shrink: 0;
+}
+
 #password-msg::after {
   content: '\200b';
 }

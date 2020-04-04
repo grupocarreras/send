@@ -238,7 +238,7 @@ module.exports = function(state, emit, archive) {
       ${archiveDetails(state.translate, archive)}
       <hr class="w-full border-t my-4 dark:border-grey-70" />
       <div class="flex justify-between w-full">
-        ${dl} ${copyOrShare}
+        ${dl}
       </div>
     </send-archive>
   `;
@@ -267,7 +267,7 @@ module.exports = function(state, emit, archive) {
       try {
         await navigator.share({
           title: state.translate('-send-brand'),
-          text: `Download "${archive.name}" with Firefox Send: simple, safe file sharing`,
+          text: `Download "${archive.name}" with Carreras Send: simple, safe file sharing`,
           //state.translate('shareMessage', { name }),
           url: archive.url
         });
@@ -482,7 +482,6 @@ module.exports.empty = function(state, emit) {
       >
         ${state.translate('addFilesButton')}
       </label>
-      ${upsell}
     </send-upload-area>
   `;
 

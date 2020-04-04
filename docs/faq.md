@@ -1,4 +1,4 @@
-## How big of a file can I transfer with Firefox Send?
+## How big of a file can I transfer with Carreras Send?
 
 There is a 2.5GB file size limit built in to Send(1GB for non-signed in users), however, in practice you may
 be unable to send files that large.  Send encrypts and decrypts the files in
@@ -17,14 +17,14 @@ Many browsers support this standard and should work fine, but some have not
 implemented it yet (mobile browsers lag behind on this, in
 particular).
 
-## Why does Firefox Send require JavaScript?
+## Why does Carreras Send require JavaScript?
 
-Firefox Send uses JavaScript to:
+Carreras Send uses JavaScript to:
 
 - Encrypt and decrypt files locally on the client instead of the server.
 - Render the user interface.
 - Manage translations on the website into [various different languages](https://github.com/mozilla/send#localization).
-- Collect data to help us improve Send in accordance with our [Terms & Privacy](https://send.firefox.com/legal).
+- Collect data to help us improve Send in accordance with our [Terms & Privacy](https://send.grupocarreras.com/legal).
 
 Since Send is an open source project, you can see all of the cool ways we use JavaScript by [examining our code](https://github.com/mozilla/send/).
 

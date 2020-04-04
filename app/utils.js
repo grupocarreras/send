@@ -38,7 +38,7 @@ function isFile(id) {
 }
 
 function copyToClipboard(str) {
-  const aux = document.createElement('input');
+  /*const aux = document.createElement('input');
   aux.setAttribute('value', str);
   aux.contentEditable = true;
   aux.readOnly = true;
@@ -55,7 +55,7 @@ function copyToClipboard(str) {
   }
   const result = document.execCommand('copy');
   document.body.removeChild(aux);
-  return result;
+  return result;*/
 }
 
 const LOCALIZE_NUMBERS = !!(

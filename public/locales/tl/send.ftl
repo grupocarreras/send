@@ -1,5 +1,5 @@
-# Firefox Send is a brand name and should not be localized.
-title = Firefox Send
+# Carreras Send is a brand name and should not be localized.
+title = Carreras Send
 siteFeedback = Feedback
 importingFile = Importing…
 encryptingFile = Encrypting…
@@ -25,7 +25,7 @@ fileTooBig = Ang file na iyon ay masyadong malaki upang mag-upload. Dapat itong 
 linkExpiredAlt = Nag-expire na ang link
 notSupportedHeader = Ang iyong browser ay hindi suportado.
 notSupportedLink = Bakit hindi suportado ang aking browser?
-notSupportedOutdatedDetail = Sa kasamaang palad ang bersyon na ito ng Firefox ay hindi sumusuporta sa teknolohiya ng web na nagpapagana ng Firefox Send. Kailangan mong i-update ang iyong browser.
+notSupportedOutdatedDetail = Sa kasamaang palad ang bersyon na ito ng Firefox ay hindi sumusuporta sa teknolohiya ng web na nagpapagana ng Carreras Send. Kailangan mong i-update ang iyong browser.
 updateFirefox = I-update ang Firefox
 deletePopupCancel = Kanselahin
 deleteButtonHover = I-delete
@@ -33,8 +33,8 @@ footerLinkLegal = Legal
 footerLinkPrivacy = Privacy
 footerLinkCookies = Mga cookie
 passwordTryAgain = Maling password. Subukan muli.
-javascriptRequired = Nangangailangan ang Firefox Send ng JavaScript
-whyJavascript = Bakit ang Firefox Send ay nangangailangan ng JavaScript?
+javascriptRequired = Nangangailangan ang Carreras Send ng JavaScript
+whyJavascript = Bakit ang Carreras Send ay nangangailangan ng JavaScript?
 enableJavascript = Mangyaring paganahin ang JavaScript at subukan muli.
 # A short representation of a countdown timer containing the number of hours and minutes remaining as digits, example "13h 47m"
 expiresHoursMinutes = { $hours }h { $minutes }m
@@ -47,8 +47,8 @@ passwordSetError = Hindi maitakda ang password na ito
 
 ## Send version 2 strings
 
-# Firefox Send, Send, Firefox, Mozilla are proper names and should not be localized
--send-brand = Firefox send
+# Carreras Send, Send, Firefox, Mozilla are proper names and should not be localized
+-send-brand = Carreras Send
 -send-short-brand = I-send
 -firefox = Firefox
 -mozilla = Mozilla

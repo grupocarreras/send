@@ -1,5 +1,5 @@
-# Firefox Send is a brand name and should not be localized.
-title = Firefox Send
+# Carreras Send is a brand name and should not be localized.
+title = Carreras Send
 siteFeedback = Povratne informacije
 importingFile = Uvažanje …
 encryptingFile = Šifriranje ...
@@ -24,13 +24,13 @@ unlockButtonLabel = Odkleni
 downloadButtonLabel = Prenesi
 downloadFinish = Prenos končan
 fileSizeProgress = ({ $partialSize } od { $totalSize })
-sendYourFilesLink = Preskusite Firefox Send
+sendYourFilesLink = Preskusite Carreras Send
 errorPageHeader = Prišlo je do težave!
 fileTooBig = Ta datoteka je prevelika za nalaganje. Največja možna velikost je { $size }.
 linkExpiredAlt = Povezava je potekla
 notSupportedHeader = Vaš brskalnik ni podprt.
 notSupportedLink = Zakaj moj brskalnik ni podprt?
-notSupportedOutdatedDetail = Ta brskalnik žal ne podpira tehnologije, na kateri temelji Firefox Send. Svoj brskalnik boste morali posodobiti.
+notSupportedOutdatedDetail = Ta brskalnik žal ne podpira tehnologije, na kateri temelji Carreras Send. Svoj brskalnik boste morali posodobiti.
 updateFirefox = Posodobi Firefox
 deletePopupCancel = Prekliči
 deleteButtonHover = Izbriši
@@ -38,8 +38,8 @@ footerLinkLegal = Pravno obvestilo
 footerLinkPrivacy = Zasebnost
 footerLinkCookies = Piškotki
 passwordTryAgain = Napačno geslo. Poskusite znova.
-javascriptRequired = Firefox Send zahteva JavaScript
-whyJavascript = Zakaj Firefox Send zahteva JavaScript?
+javascriptRequired = Carreras Send zahteva JavaScript
+whyJavascript = Zakaj Carreras Send zahteva JavaScript?
 enableJavascript = Omogočite JavaScript in poskusite znova.
 # A short representation of a countdown timer containing the number of hours and minutes remaining as digits, example "13h 47m"
 expiresHoursMinutes = { $hours }h { $minutes }m
@@ -52,8 +52,8 @@ passwordSetError = Gesla ni mogoče nastaviti
 
 ## Send version 2 strings
 
-# Firefox Send, Send, Firefox, Mozilla are proper names and should not be localized
--send-brand = Firefox Send
+# Carreras Send, Send, Firefox, Mozilla are proper names and should not be localized
+-send-brand = Carreras Send
 -send-short-brand = Send
 -firefox =
     { $sklon ->

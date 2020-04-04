@@ -1,5 +1,5 @@
-# Firefox Send is a brand name and should not be localized.
-title = Firefox Send
+# Carreras Send is a brand name and should not be localized.
+title = Carreras Send
 siteFeedback = Feedback
 importingFile = A importar...
 encryptingFile = A encriptar...
@@ -16,13 +16,13 @@ unlockButtonLabel = Desbloquear
 downloadButtonLabel = Transferir
 downloadFinish = Transferência concluída
 fileSizeProgress = ({ $partialSize } de { $totalSize })
-sendYourFilesLink = Experimentar o Firefox Send
+sendYourFilesLink = Experimentar o Carreras Send
 errorPageHeader = Algo correu mal.
 fileTooBig = Esse ficheiro é muito grande para carregar. Deve ser menor do que { $size }.
 linkExpiredAlt = Ligação expirada
 notSupportedHeader = O seu navegador não é suportado.
 notSupportedLink = Porque é que o meu navegador não é suportado?
-notSupportedOutdatedDetail = Infelizmente esta versão do Firefox não suporta a tecnologia web que faz o Firefox Send funcionar. Precisa de atualizar o seu navegador.
+notSupportedOutdatedDetail = Infelizmente esta versão do Firefox não suporta a tecnologia web que faz o Carreras Send funcionar. Precisa de atualizar o seu navegador.
 updateFirefox = Atualizar o Firefox
 deletePopupCancel = Cancelar
 deleteButtonHover = Apagar
@@ -30,8 +30,8 @@ footerLinkLegal = Informação legal
 footerLinkPrivacy = Privacidade
 footerLinkCookies = Cookies
 passwordTryAgain = Palavra-passe incorreta. Tente novamente.
-javascriptRequired = O Firefox Send requer JavaScript
-whyJavascript = Porque é que o Firefox Send requer JavaScript?
+javascriptRequired = O Carreras Send requer JavaScript
+whyJavascript = Porque é que o Carreras Send requer JavaScript?
 enableJavascript = Por favor ative o JavaScript e tente novamente.
 # A short representation of a countdown timer containing the number of hours and minutes remaining as digits, example "13h 47m"
 expiresHoursMinutes = { $hours }h { $minutes }m
@@ -44,8 +44,8 @@ passwordSetError = Esta palavra-passe não pôde ser definida
 
 ## Send version 2 strings
 
-# Firefox Send, Send, Firefox, Mozilla are proper names and should not be localized
--send-brand = Firefox Send
+# Carreras Send, Send, Firefox, Mozilla are proper names and should not be localized
+-send-brand = Carreras Send
 -send-short-brand = Send
 -firefox = Firefox
 -mozilla = Mozilla

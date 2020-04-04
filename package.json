@@ -33,7 +33,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
       "post-merge": "npm install",
       "post-checkout": "scripts/sync-npm-dependencies.sh"
     }

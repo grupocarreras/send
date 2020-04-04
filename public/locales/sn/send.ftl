@@ -1,5 +1,5 @@
-# Firefox Send is a brand name and should not be localized.
-title = Firefox Send
+# Carreras Send is a brand name and should not be localized.
+title = Carreras Send
 siteFeedback = Zvirikutaurwa
 importingFile = Kutora faira
 encryptingFile = Kuinikiriputa

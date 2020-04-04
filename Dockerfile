@@ -1,5 +1,5 @@
 ##
-# Firefox Send - Mozilla
+# Carreras Send - Mozilla
 #
 # License https://github.com/mozilla/send/blob/master/LICENSE
 ##

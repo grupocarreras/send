@@ -1,5 +1,5 @@
-# Firefox Send is a brand name and should not be localized.
-title = Firefox Send
+# Carreras Send is a brand name and should not be localized.
+title = Carreras Send
 siteFeedback = Feedback
 importingFile = Importeren…
 encryptingFile = Versleutelen…
@@ -20,13 +20,13 @@ unlockButtonLabel = Ontgrendelen
 downloadButtonLabel = Downloaden
 downloadFinish = Downloaden voltooid
 fileSizeProgress = ({ $partialSize } van { $totalSize })
-sendYourFilesLink = Firefox Send proberen
+sendYourFilesLink = Carreras Send proberen
 errorPageHeader = Er is iets misgegaan!
 fileTooBig = Dat bestand is te groot om te worden geüpload. Het moet kleiner zijn dan { $size }.
 linkExpiredAlt = Koppeling verlopen
 notSupportedHeader = Uw browser wordt niet ondersteund.
 notSupportedLink = Waarom wordt mijn browser niet ondersteund?
-notSupportedOutdatedDetail = Helaas ondersteunt deze versie van Firefox de webtechnologie die Firefox Send gebruikt niet. U dient uw browser bij te werken.
+notSupportedOutdatedDetail = Helaas ondersteunt deze versie van Firefox de webtechnologie die Carreras Send gebruikt niet. U dient uw browser bij te werken.
 updateFirefox = Firefox bijwerken
 deletePopupCancel = Annuleren
 deleteButtonHover = Verwijderen
@@ -34,8 +34,8 @@ footerLinkLegal = Juridisch
 footerLinkPrivacy = Privacy
 footerLinkCookies = Cookies
 passwordTryAgain = Onjuist wachtwoord. Probeer het opnieuw.
-javascriptRequired = Firefox Send vereist JavaScript
-whyJavascript = Waarom vereist Firefox Send JavaScript?
+javascriptRequired = Carreras Send vereist JavaScript
+whyJavascript = Waarom vereist Carreras Send JavaScript?
 enableJavascript = Schakel JavaScript in en probeer het opnieuw.
 # A short representation of a countdown timer containing the number of hours and minutes remaining as digits, example "13h 47m"
 expiresHoursMinutes = { $hours }u { $minutes }m
@@ -48,8 +48,8 @@ passwordSetError = Dit wachtwoord kon niet worden ingesteld
 
 ## Send version 2 strings
 
-# Firefox Send, Send, Firefox, Mozilla are proper names and should not be localized
--send-brand = Firefox Send
+# Carreras Send, Send, Firefox, Mozilla are proper names and should not be localized
+-send-brand = Carreras Send
 -send-short-brand = Send
 -firefox = Firefox
 -mozilla = Mozilla

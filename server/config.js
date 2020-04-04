@@ -31,7 +31,7 @@ const conf = convict({
   },
   anon_max_expire_seconds: {
     format: Number,
-    default: 86400,
+    default: 86400 * 7,
     env: 'ANON_MAX_EXPIRE_SECONDS'
   },
   download_counts: {
@@ -46,7 +46,7 @@ const conf = convict({
   },
   anon_max_downloads: {
     format: Number,
-    default: 5,
+    default: 100,
     env: 'ANON_MAX_DOWNLOADS'
   },
   max_files_per_archive: {
@@ -82,7 +82,7 @@ const conf = convict({
   },
   amplitude_id: {
     format: String,
-    default: '',
+    default: 'Carreras',
     env: 'AMPLITUDE_ID'
   },
   analytics_id: {
@@ -112,7 +112,7 @@ const conf = convict({
   },
   anon_max_file_size: {
     format: Number,
-    default: 1024 * 1024 * 1024,
+    default: 1024 * 1024 * 100,
     env: 'ANON_MAX_FILE_SIZE'
   },
   l10n_dev: {
@@ -122,7 +122,7 @@ const conf = convict({
   },
   base_url: {
     format: 'url',
-    default: 'https://send.firefox.com',
+    default: 'https://send.grupocarreras.com',
     env: 'BASE_URL'
   },
   file_dir: {
@@ -154,6 +154,27 @@ const conf = convict({
     format: String,
     default: '',
     env: 'IP_DB'
+  },
+  email_service: {
+    format: String,
+    default:
+      'https://portaltbo.grupocarreras.com/notifier/services/rest/createnotificationmanagement/v1/createnotification',
+    env: 'EMAIL_SERVICE'
+  },
+  s3_access_key: {
+    format: String,
+    default: '',
+    env: 'S3_ACCESS_KEY'
+  },
+  s3_secret_access_key: {
+    format: String,
+    default: '',
+    env: 'S3_SECRET_ACCESS_KEY'
+  },
+  s3_endpoint: {
+    format: String,
+    default: '',
+    env: 'S3_ENDPOINT'
   }
 });
 
