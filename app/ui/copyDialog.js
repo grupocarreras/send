@@ -71,13 +71,7 @@ module.exports = function(name, url, emit) {
         >
           ${state.translate('sendLinkButton')}
         </button>
-        <button
-          class="link-blue my-4 font-medium cursor-pointer focus:outline"
-          onclick="${close}"
-          title="${state.translate('okButton')}"
-        >
-          ${state.translate('okButton')}
-        </button>
+        
       </send-copy-dialog>
     `;
 
