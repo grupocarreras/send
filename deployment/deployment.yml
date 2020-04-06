@@ -1,0 +1,88 @@
+apiVersion: v1
+kind: DeploymentConfig
+metadata:
+  name: carreras-send
+  namespace: ${NAMESPACE}
+spec:
+  replicas: 1
+  selector:
+    name: carreras-send
+  strategy:
+    type: Rolling
+  template:
+    metadata:
+      labels:
+        name: carreras-send
+    spec:
+      containers:
+      - name: carreras-send
+        resources:
+          requests:
+            cpu: 0
+            memory: 0
+          limits:
+            cpu: "1"
+            memory: 2048Mi
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 1443
+            scheme: HTTP
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 1443
+            scheme: HTTP
+          initialDelaySeconds: 300
+          periodSeconds: 60
+          timeoutSeconds: 15
+          successThreshold: 1
+          failureThreshold: 3
+        env:
+          - name: S3_BUCKET
+            value: ${S3_BUCKET}
+          - name: S3_ACCESS_KEY
+            value: ${S3_ACCESS_KEY}
+            value: XMCEN0QFSNLMXJ5R0BXVASGSA
+          - name: S3_SECRET_ACCESS_KEY
+            value: ${S3_SECRET_ACCESS_KEY}
+            value: BsNdhPmawOlqIUxIaWclcqpz83OEEJd2G6I3SDFijsd
+          - name: S3_ENDPOINT
+            value: ${S3_ENDPOINT}
+            value: http://10.1.2.90:9005
+          - name: EMAIL_SERVICE
+            value: ${EMAIL_SERVICE}
+            value: http://sb-notifier.sb-common-cgl-pro.svc:8080/services/rest/createnotificationmanagement/v1/createnotification
+  triggers:
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - carreras-send
+      from:
+        kind: ImageStreamTag
+        name: 'carreras-send:latest'
+        namespace: ${NAMESPACE}
+    type: ImageChange
+  - type: ConfigChange
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: carreras-send
+  namespace: ${NAMESPACE}
+  annotations:
+spec:
+  ports:
+  - name: carreras-send
+    protocol: TCP
+    port: ${PORT}
+    targetPort: 1443
+  selector:
+    name: carreras-send
+

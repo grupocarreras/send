@@ -158,7 +158,7 @@ const conf = convict({
   email_service: {
     format: String,
     default:
-      'https://portaltbo.grupocarreras.com/notifier/services/rest/createnotificationmanagement/v1/createnotification',
+      '',
     env: 'EMAIL_SERVICE'
   },
   s3_access_key: {
