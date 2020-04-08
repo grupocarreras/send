@@ -17,6 +17,15 @@ class Header extends Component {
     return false;
   }
   createElement() {
+    const logo = html`
+      <div>
+        <a class="carreras-logo-big px-4 py-2 md:px-8 md:py-4" href="https://www.grupocarreras.com/">
+        </a>
+      </div>
+    `;
+
+
+
     const title =
       platform() === 'android'
         ? html`
@@ -42,7 +51,7 @@ class Header extends Component {
       <header
         class="main-header relative flex-none flex flex-row items-center justify-between w-full px-6 md:px-8 h-16 md:h-24 z-20 bg-transparent"
       >
-        ${title}
+        ${title} ${logo}
       </header>
     `;
   }

@@ -200,10 +200,23 @@ footer li:hover {
   flex-shrink: 0;
 }
 
+.carreras-logo-big {
+  background-image: url('../assets/carreras-logo.png');
+  background-repeat: no-repeat;
+  background-size: 200px, 64px;
+  overflow: hidden;
+  text-indent: 120%;
+  white-space: nowrap;
+  display: inline-block;
+  height: 64px;
+  width: 200px;
+  flex-shrink: 0;
+}
+
 .carreras-logo {
   background-image: url('../assets/carreras-logo.png');
   background-repeat: no-repeat;
-  background-size: 100px, 48px;
+  background-size: 100px, 32px;
   overflow: hidden;
   text-indent: 120%;
   white-space: nowrap;
@@ -212,7 +225,6 @@ footer li:hover {
   width: 100px;
   flex-shrink: 0;
 }
-
 #password-msg::after {
   content: '\200b';
 }
