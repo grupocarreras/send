@@ -13,6 +13,9 @@ const {
 } = require('../utils');
 const expiryOptions = require('./expiryOptions');
 
+const MAX_LENGTH = 32;
+const MIN_LENGTH = 8;
+
 function expiryInfo(translate, archive) {
   const l10n = timeLeft(archive.expiresAt - Date.now());
   return raw(
@@ -26,28 +29,19 @@ function expiryInfo(translate, archive) {
 }
 
 function password(state) {
-  const MAX_LENGTH = 32;
-
+    
   return html`
     <div class="mb-2 px-1">
-      <div class="checkbox inline-block mr-3">
-        <input
-          id="add-password"
-          type="checkbox"
-          ${state.archive.password ? 'checked' : ''}
-          autocomplete="off"
-          onchange="${togglePasswordInput}"
-        />
-        <label for="add-password">
+      <div class="inline-block mr-3">
+        <label>
           ${state.translate('addPassword')}
         </label>
       </div>
       <input
         id="password-input"
-        class="${state.archive.password
-          ? ''
-          : 'invisible'} border rounded focus:border-blue-60 leading-normal my-1 py-1 px-2 h-8 dark:bg-grey-80"
+        class="border rounded focus:border-blue-60 leading-normal my-1 py-1 px-2 h-8 dark:bg-grey-80"
         autocomplete="off"
+        minlength="${MIN_LENGTH}"
         maxlength="${MAX_LENGTH}"
         type="password"
         oninput="${inputChanged}"
@@ -59,25 +53,14 @@ function password(state) {
         id="password-msg"
         for="password-input"
         class="block text-xs text-grey-70"
+        textContent="${state.translate('maxPasswordLength', {
+          length: MAX_LENGTH
+        })}"
       ></label>
     </div>
   `;
 
-  function togglePasswordInput(event) {
-    event.stopPropagation();
-    const checked = event.target.checked;
-    const input = document.getElementById('password-input');
-    if (checked) {
-      input.classList.remove('invisible');
-      input.focus();
-    } else {
-      input.classList.add('invisible');
-      input.value = '';
-      document.getElementById('password-msg').textContent = '';
-      state.archive.password = null;
-    }
-  }
-
+  
   function inputChanged() {
     const passwordInput = document.getElementById('password-input');
     const pwdmsg = document.getElementById('password-msg');
@@ -85,8 +68,12 @@ function password(state) {
     const length = password.length;
 
     if (length === MAX_LENGTH) {
-      pwdmsg.textContent = state.translate('maxPasswordLength', {
+        pwdmsg.textContent = state.translate('maxPasswordLength', {
         length: MAX_LENGTH
+      });
+    } else if (length < MIN_LENGTH) {
+        pwdmsg.textContent = state.translate('minPasswordLength', {
+        length: MIN_LENGTH
       });
     } else {
       pwdmsg.textContent = '';
@@ -349,11 +336,24 @@ module.exports.wip = function(state, emit) {
   }
 
   function upload(event) {
-    window.scrollTo(0, 0);
-    event.preventDefault();
-    event.target.disabled = true;
-    if (!state.uploading) {
-      emit('upload');
+    const passwordInput = document.getElementById('password-input');
+    const pwdmsg = document.getElementById('password-msg');
+    const password = passwordInput.value;
+    const length = password.length;
+
+    if(length <= MAX_LENGTH && length >= MIN_LENGTH){
+
+      window.scrollTo(0, 0);
+      event.preventDefault();
+      event.target.disabled = true;
+      if (!state.uploading) {
+        emit('upload');
+      }
+      
+    }else{
+      pwdmsg.textContent = state.translate('minPasswordLength', {
+        length: MIN_LENGTH
+      });
     }
   }
 
